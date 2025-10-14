@@ -1,7 +1,7 @@
-from flask import Flask, render_template,request,redirect,url_for,session
-from flask_mysqldb import MySQL,MySQLdb
+from flask import Flask, render_template
+from flask_mysqldb import MySQL
 
-app=Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -14,6 +14,10 @@ def verification():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/pemilu')
+def pemilu():
+    return render_template('pemilu/index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
