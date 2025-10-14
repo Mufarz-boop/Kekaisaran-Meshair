@@ -1,4 +1,6 @@
-  <div class="container py-5">
+{% extends 'base_admin.html' %}
+{% block content %}
+<div class="container py-5">
     <h3 class="fw-bold mb-4 text-primary">Kelola Data Kandidat</h3>
     <button class="btn btn-success mb-4 rounded-pill px-4">+ Tambah Kandidat</button>
 
@@ -20,11 +22,12 @@
             <td>Menjadikan OSIS lebih aktif dan kreatif</td>
             <td>Meningkatkan kegiatan ekstrakurikuler</td>
             <td>
-              <button class="btn btn-warning btn-sm rounded-pill">Edit</button>
-              <button class="btn btn-danger btn-sm rounded-pill">Hapus</button>
+            <button class="btn btn-warning btn-sm rounded-pill">Edit</button>
+            <button class="btn btn-danger btn-sm rounded-pill">Hapus</button>
             </td>
-          </tr>
+        </tr>
         </tbody>
-      </table>
+    </table>
     </div>
-  </div>
+</div>
+{%endblock%}

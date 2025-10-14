@@ -1,33 +1,50 @@
-  {% extends 'base_admin.html' %}
-  {% block content %}
-  <div class="container py-5">
-    <h3 class="fw-bold mb-4 text-primary">Kelola Data Kandidat</h3>
-    <button class="btn btn-success mb-4 rounded-pill px-4">+ Tambah Kandidat</button>
+{% extends "base.html" %}
+{% block content %}
 
-    <div class="card p-4">
-      <table class="table table-hover align-middle mb-0">
-        <thead class="table-primary">
-          <tr>
-            <th>No</th>
-            <th>Nama Kandidat</th>
-            <th>Visi</th>
-            <th>Misi</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Amanda Putri</td>
-            <td>Menjadikan OSIS lebih aktif dan kreatif</td>
-            <td>Meningkatkan kegiatan ekstrakurikuler</td>
-            <td>
-              <button class="btn btn-warning btn-sm rounded-pill">Edit</button>
-              <button class="btn btn-danger btn-sm rounded-pill">Hapus</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-lg">
+    <div class="container">
+      <a class="navbar-brand text-primary fs-4" href="#">E-Voting OSIS</a>
+      <div class="ms-auto">
+        <a href="{{url_for('login')}}" class="btn btn-outline-primary px-4 rounded-pill">Login</a>
+      </div>
     </div>
-  </div>
-{% endblock %}
+  </nav>
+
+  <section class="hero d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+      <h1>Selamat Datang di Aplikasi Pemilihan Ketua OSIS</h1>
+      <p>Gunakan hak suaramu dengan bijak untuk memilih pemimpin yang membawa perubahan positif bagi sekolah kita.</p>
+      <a href="{{url_for('verification')}}" class="btn btn-light fw-semibold">Mulai Memilih</a>
+    </div>
+  </section>
+
+  <section class="info-section py-5">
+    <div class="container text-center py-5">
+      <h2 class="fw-bold mb-5 text-primary">Mengapa Menggunakan E-Voting?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h4>Efisien & Cepat</h4>
+            <p>Proses pemilihan dilakukan secara digital, menghemat waktu dan meminimalkan kesalahan perhitungan suara.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h4>Transparan</h4>
+            <p>Setiap hasil suara tercatat secara real-time, dapat dipantau oleh semua pihak dengan mudah.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h4>Ramah Lingkungan</h4>
+            <p>Mengurangi penggunaan kertas dan mendukung program sekolah hijau yang berkelanjutan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p class="mb-0">© 2025 SMK Negeri RPL | E-Voting OSIS</p>
+  </footer>
+{% endblock %}
